@@ -6,22 +6,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OTSCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="145" height="247.5"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" id="gTV-IL-0wX" customClass="OTSCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="182.5"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="145" height="247.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="145" height="182.5"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Hi, I'm the title label, and I can be long" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="125" translatesAutoresizingMaskIntoConstraints="NO" id="YmP-cr-ceH">
-                        <rect key="frame" x="10" y="10" width="125" height="54"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The text label can also have as much text as it wants. Although in most cases, it will be longer than the title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="125" translatesAutoresizingMaskIntoConstraints="NO" id="kqD-ji-SMx">
-                        <rect key="frame" x="10" y="75" width="125" height="164.5"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="The text label can also have as much text as it wants. Although in most cases, it will be longer than the title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="125" translatesAutoresizingMaskIntoConstraints="NO" id="kqD-ji-SMx">
+                        <rect key="frame" x="10" y="10.5" width="125" height="163"/>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="500" constant="162" id="0uT-Xc-djf"/>
+                            <constraint firstAttribute="width" constant="125" id="pmt-Ru-555"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -31,22 +28,17 @@
             </view>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="YmP-cr-ceH" secondAttribute="trailing" constant="10" id="575-Mk-z9Z"/>
                 <constraint firstItem="kqD-ji-SMx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="89C-x7-ZXI"/>
-                <constraint firstAttribute="bottom" secondItem="kqD-ji-SMx" secondAttribute="bottom" constant="10" id="BOd-OG-s9d"/>
-                <constraint firstAttribute="centerX" secondItem="YmP-cr-ceH" secondAttribute="centerX" id="BVX-jY-Lmp"/>
-                <constraint firstAttribute="centerX" secondItem="kqD-ji-SMx" secondAttribute="centerX" id="DYc-eJ-OKv"/>
+                <constraint firstAttribute="centerX" secondItem="kqD-ji-SMx" secondAttribute="centerX" id="Mvf-PE-ASl"/>
                 <constraint firstAttribute="trailing" secondItem="kqD-ji-SMx" secondAttribute="trailing" constant="10" id="P1p-y9-x8x"/>
-                <constraint firstItem="YmP-cr-ceH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Wme-Gc-1OA"/>
-                <constraint firstItem="kqD-ji-SMx" firstAttribute="top" secondItem="YmP-cr-ceH" secondAttribute="bottom" constant="10" id="YRF-U7-y7u"/>
-                <constraint firstItem="YmP-cr-ceH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="edX-Qs-tFI"/>
+                <constraint firstItem="kqD-ji-SMx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="d7d-hg-6Mh"/>
+                <constraint firstAttribute="bottom" secondItem="kqD-ji-SMx" secondAttribute="bottom" constant="10" id="hj4-8y-WaN"/>
             </constraints>
-            <size key="customSize" width="162" height="247.5"/>
+            <size key="customSize" width="162" height="182.5"/>
             <connections>
                 <outlet property="textLabel" destination="kqD-ji-SMx" id="6xV-TO-wcr"/>
-                <outlet property="titleLabel" destination="YmP-cr-ceH" id="8nn-Kz-mEf"/>
             </connections>
-            <point key="canvasLocation" x="-50.5" y="392.75"/>
+            <point key="canvasLocation" x="-367.5" y="359.25"/>
         </collectionViewCell>
     </objects>
 </document>

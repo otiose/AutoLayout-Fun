@@ -72,11 +72,20 @@ static NSString * const kOTSCollectionCellIdentifier = @"OTSCollectionViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     OTSCollectionViewCell *cell = (OTSCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kOTSCollectionCellIdentifier forIndexPath:indexPath];
 
-    cell.titleLabel.text = self.titles[indexPath.item];
-    cell.textLabel.text = self.texts[indexPath.item];
+    NSString *title = self.titles[indexPath.item];
+    NSString *text = self.texts[indexPath.item];
+    if ([text isEqual:@"."]) {
+        NSLog(@"");
+    }
+    [cell configureWithTitle:title text:text];
 
     CGSize size = [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    NSLog(@"%03ld: %@", (long)indexPath.item, NSStringFromCGSize(size));
+    if ([text isEqual:@"."]) {
+        NSLog(@"dconfigure stupid dot size: %@", NSStringFromCGSize(size));
+        NSLog(@"actual size: %@", NSStringFromCGSize(cell.bounds.size));
+    }
+
+
     return cell;
 }
 
@@ -84,11 +93,15 @@ static NSString * const kOTSCollectionCellIdentifier = @"OTSCollectionViewCell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString *title = self.titles[indexPath.item];
-    NSString *text = self.titles[indexPath.item];
+    NSString *text = self.texts[indexPath.item];
 
     [self.prototypeCell configureWithTitle:title text:text];
 
     CGSize size = [self.prototypeCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    if ([text isEqual:@"."]) {
+        NSLog(@"stupid dot size: %@", NSStringFromCGSize(size));
+    }
+
     return size;
 }
 
